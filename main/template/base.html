@@ -17,8 +17,8 @@
     <section>
       <header>
         <nav
-        class="navbar navbar-expand-lg navbar-light"
-        style="padding: 1% 1%; background-color: rgb(224, 182, 117)"
+        class="navbar navbar-expand-lg navbar-dark"
+        style="padding: 1% 1%; background-color: saddlebrown"
       >
         <!-- humberger button -->
         <button
@@ -36,7 +36,7 @@
           ></span>
         </button>
         <!-- the nav brand -->
-        <a href="/" class="navbar-brand" style="color: black">
+        <a href="/" class="navbar-brand" style="color: white;font-weight: bold;">
           NSUK Help Desk
         </a>
 
@@ -54,6 +54,9 @@
             <li class="nav-item">
               <a href="/contact" class="nav-link">Contact Us</a>
             </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Faq</a>
+            </li>
           </ul>
           <div class="mx-2">
             <a href="" class="btn btn-dark mx-auto">Login </a>
@@ -63,6 +66,32 @@
           </form>
         </div>
       </nav>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'bg.jpg' %}" class="d-block w-100" alt="bg 1">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'bg2.jpg' %}" class="d-block w-100" alt="bg 2">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'bg3.jpg' %}" class="d-block w-100" alt="bg 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
       </header>
     </section>
     <!-- body section -->
