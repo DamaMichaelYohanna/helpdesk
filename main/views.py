@@ -8,17 +8,17 @@ def home(request):
 
 def about(request):
     """view for about us page"""
-    return render(request, 'about.hmtl')
+    return render(request, 'about.html')
 
 
 def contact(request):
     """ view for contact us page"""
-    return render(request, 'contact.hmtl')
+    return render(request, 'contact.html')
 
 
 def service(request):
     """view for service page"""
-    return render(request, 'service.hmtl')
+    return render(request, 'service.html')
 
 
 def faq(request):

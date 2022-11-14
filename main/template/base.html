@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+  />
+  <script href="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <!-- header section -->
+    <section>
+      <header>
+        <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="padding: 1% 1%; background-color: rgb(224, 182, 117)"
+      >
+        <!-- humberger button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggler"
+          aria-controls="navbarToggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span
+            class="navbar-toggler-icon"
+            style="background-color: white; color: white"
+          ></span>
+        </button>
+        <!-- the nav brand -->
+        <a href="/" class="navbar-brand" style="color: black">
+          NSUK Help Desk
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="/contact" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+          <div class="mx-2">
+            <a href="" class="btn btn-dark mx-auto">Login </a>
+
+            <a href="" class="btn btn-outline-dark">Sign Up </a>
+          </div>
+          </form>
+        </div>
+      </nav>
+      </header>
+    </section>
+    <!-- body section -->
+    <section>{% block content %} {% endblock%}</section>
+    <!-- footer -->
+    <section>
+      <footer></footer>
+    </section>
+  </body>
+</html>
