@@ -1,0 +1,20 @@
+/* Home page css  */
+.home{
+    background-color: rgb(219, 219, 161)
+}
+.home h2{
+    text-align: center
+}
+.home-welcome{
+    text-align: center; width: 60%; margin: auto
+}
+.vision, .mission{
+    text-align: center;
+    background: linear-gradient(
+        to right,
+      saddlebrown,
+        rgb(219, 219, 161),
+        saddlebrown
+        
+            );
+}
