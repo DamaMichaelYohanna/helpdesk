@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
 
 
 def home(request):
@@ -13,7 +13,14 @@ def about(request):
 
 def contact(request):
     """ view for contact us page"""
-    return render(request, 'contact.html')
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+        return redirect(reverse("main:home"))
+
+    else:
+        return render(request, 'contact.html')
 
 
 def service(request):
