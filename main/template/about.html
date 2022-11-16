@@ -1,1 +1,37 @@
-{% include 'base.html' %}
+{% include 'base.html' %} {% load static %}{% block content %}
+<div class="about">
+  <div
+    class="pt-5 pb-5"
+    style="
+      text-align: center;
+      background-color: saddlebrown;
+      color: lightyellow;
+    "
+  >
+    <h2 class="pb-2">About US</h2>
+  </div>
+  <div style="text-align: center">
+    <img
+      src="{% static 'conv.jpeg' %}"
+      alt="student-picture"
+      height="100%"
+      width="500px"
+      style="
+        position: relative;
+        top: -40px;
+        box-shadow: -0px -5px 10px rgb(201, 176, 158);
+      "
+    />
+    <p style="width: 38%; margin: 0px auto; text-align: justify">
+      <span style="font-weight: bold">Nasarawa State University,</span> Keffi is
+      a young university situated in the middle belt region of Nigeria. The
+      University has accomplished incomparable goals within its short time of
+      birth. this is as a result of its determination and diligence in
+      administration. <br /><br />
+      Here in Nsuk HelpDesk we provide you with most recent and accurate
+      information regarding happenings around our versity. We are also here to
+      resolve your ICT related issues. Contact when there is need
+    </p>
+  </div>
+</div>
+{% endblock %}
