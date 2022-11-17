@@ -1,4 +1,5 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %} NSUK HelpDesk | Contact Us
+{%endblock title %} {% block content %}
 <div>
   <div class="contact">
     <h2 style="text-align: center; padding: 2%">Let's Start a Conversation</h2>
@@ -10,7 +11,10 @@
       <p>
         Note: You can track the progress of your complain, suggestion and issues
       </p>
-      <span>To be able to do that, you are required login.</span>
+      <span
+        >To be able to do that, copy out the reference id that will be
+        generated. You can at any time track the progress of your complain</span
+      >
       <p>
         Meanwhile, you submit your issues ananymously by filling the contact
         form without your name
@@ -56,3 +60,4 @@
     </div>
   </div>
 </div>
+{% endblock %}
