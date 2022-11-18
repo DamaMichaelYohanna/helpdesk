@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, reverse, redirect
 
 from main.models import Issue
@@ -16,10 +17,15 @@ def about(request):
 def contact(request):
     """ view for contact us page"""
     if request.method == "POST":
-        name = request.POST.get("name")
+        name = request.POST.get("fullname")
         email = request.POST.get("email")
         message = request.POST.get("message")
-        return redirect(reverse("main:home"))
+        obj = Issue.objects.create(complainant=name, email=email, complain=message)
+        # obj.save(commt=False)
+        obj.ref = "##000009876"
+        obj.save()
+        messages.success(request, "your issue has been submitted successfully")
+        return render(request, 'contact.html', {'ticket': obj.ref})
 
     else:
         return render(request, 'contact.html')

@@ -4,6 +4,12 @@
   <div class="contact">
     <h2 style="text-align: center; padding: 2%">Let's Start a Conversation</h2>
   </div>
+  {% if ticket %}
+  <h1 style="text-align: center; color: red">
+    Your ticket is {{ticket}}
+    <a href="/" class="btn btn-dark" style="background: saddlebrown">Done</a>
+  </h1>
+  {% endif %}
   <div class="row contact-inner">
     <div class="col-md-6 ps-5">
       <h3>Ask how we can help you</h3>
@@ -30,11 +36,12 @@
             name="fullname"
             id="fullname"
             class="form-control"
+            autofocus
           />
         </p>
 
         <p>
-          <label for="fullname">Enter your email</label>
+          <label for="email">Enter your email</label>
           <br />
           <input type="email" name="email" id="email" class="form-control" />
         </p>

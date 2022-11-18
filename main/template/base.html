@@ -67,6 +67,14 @@
           </form>
         </div>
       </nav>
+      {{message}}dfsdkjlfs dfksjd
+      {{messages}}
+      {% if messages %}
+      {% for message in messages %}
+      <script>window.alert("Issue submitted successfully")</script>
+      {{message}}
+      {% endfor %}
+      {% endif %}
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">

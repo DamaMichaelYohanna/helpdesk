@@ -11,8 +11,8 @@ class Issue(models.Model):
                      ("Processing", "Processing"),
                      ('Resolved', 'Resolved'),
                      ('Failed', 'Failed')]
-    status = models.CharField(max_length=15, choices=status_choice)
-    date = models.DateTimeField(auto_created=True)
+    status = models.CharField(max_length=15, choices=status_choice, default="Pending")
+    date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f'{self.ref}'
