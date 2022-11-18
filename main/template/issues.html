@@ -1,5 +1,5 @@
-{% extends 'base.html' %}{% block title %}NSUK HelpDesk | Issues {% endblock%}
-{% block content %}
+{% extends 'base.html' %}{% load static%}{% block title %}NSUK HelpDesk | Issues
+{% endblock%} {% block content %}
 <div class="issues pt-5">
   <h2>Track Issues</h2>
   <p>
@@ -14,6 +14,7 @@
           class="form-control"
           type="text"
           name="ticket"
+          required
           id="ticket"
           autofocus
         />
@@ -22,5 +23,40 @@
       <button class="btn btn-dark">Track</button>
     </form>
   </div>
+  {% if issue %}
+  <div class="mt-5">
+    <h3>Search result</h3>
+    <!-- <hr /> -->
+    <table class="table">
+      <tr>
+        <th>Ref</th>
+        <th>complainant</th>
+        <th>status</th>
+        <th>Submitted on</th>
+      </tr>
+      <tr>
+        <td>{{ issue.ref }}</td>
+        <td>{{ issue.complainant }}</td>
+        <td>{{ issue.status }}</td>
+        <td>{{ issue.date }}</td>
+      </tr>
+    </table>
+  </div>
+  {% else %}
+  <div class="mt-5">
+    <h3>No record found</h3>
+    <hr
+      width="50%"
+      style="margin: 2% auto; box-shadow: 2px 0px 16px saddlebrown"
+    />
+    <img
+      src="{% static 'dis.gif' %}"
+      alt="disappointed"
+      height="100%"
+      width="100%"
+      style="border-radius: 40px"
+    />
+  </div>
+  {% endif %}
 </div>
 {%endblock %}

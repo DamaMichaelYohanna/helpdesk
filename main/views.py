@@ -29,8 +29,10 @@ def issue(request):
     """view for service page"""
     ticket = request.GET.get("ticket")
     if ticket:
-        track_issue = Issue.objects.get(ref=ticket)
-        print(track_issue.complainant)
+        try:
+            track_issue = Issue.objects.get(ref=ticket)
+        except Issue.DoesNotExist:
+            track_issue = None
         return render(request, 'issues.html', {'issue': track_issue})
 
     return render(request, 'issues.html')
