@@ -1,0 +1,26 @@
+{% extends 'base.html' %}{% block title %}NSUK HelpDesk | Issues {% endblock%}
+{% block content %}
+<div class="issues pt-5">
+  <h2>Track Issues</h2>
+  <p>
+    Kindly use the provide input area to check and track your submited Issue(s).
+    To submit new issues, kindly use the contact us tab
+  </p>
+  <div class="inner-issues">
+    <form action="." method="get">
+      <div class="input-group">
+        <span class="input-group-text">Issue Ticket</span>
+        <input
+          class="form-control"
+          type="text"
+          name="ticket"
+          id="ticket"
+          autofocus
+        />
+      </div>
+      <br />
+      <button class="btn btn-dark">Track</button>
+    </form>
+  </div>
+</div>
+{%endblock %}

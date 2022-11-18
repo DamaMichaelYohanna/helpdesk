@@ -40,3 +40,17 @@ padding:2% 0px;
 .contact-inner{
     padding:2%;
 }
+
+
+
+/* issues page css */
+.issues{
+    text-align: center
+}
+
+.inner-issues{
+    width: 50%; margin: auto
+}
+.inner-issues button{
+    background: saddlebrown
+}
