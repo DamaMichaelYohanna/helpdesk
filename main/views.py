@@ -23,9 +23,9 @@ def contact(request):
         return render(request, 'contact.html')
 
 
-def service(request):
+def issue(request):
     """view for service page"""
-    return render(request, 'service.html')
+    return render(request, 'issues.html')
 
 
 def faq(request):
