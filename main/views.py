@@ -1,5 +1,7 @@
 from django.shortcuts import render, reverse, redirect
 
+from main.models import Issue
+
 
 def home(request):
     """view for home page"""
@@ -25,6 +27,12 @@ def contact(request):
 
 def issue(request):
     """view for service page"""
+    ticket = request.GET.get("ticket")
+    if ticket:
+        track_issue = Issue.objects.get(ref=ticket)
+        print(track_issue.complainant)
+        return render(request, 'issues.html', {'issue': track_issue})
+
     return render(request, 'issues.html')
 
 
