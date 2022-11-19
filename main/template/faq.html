@@ -1,28 +1,64 @@
 {% extends 'base.html' %}{% block title %} {% endblock %} {% block content %}
-<div>
+<div class="container pt-5">
+  <h2 class="pt-4 pb-4" style="text-align: center">
+    FREQUENTLY ASKED QUESTIONS
+  </h2>
   <div class="row">
-    <div class="col-md">
+    <div class="col-md-6 pt-4">
       <button
         data-bs-toggle="collapse"
-        data-bs-target="#demo"
-        class="btn btn-dark"
-        style="width: 100%"
+        data-bs-target="#faq1"
+        class="btn btn-dark faq-btn"
+        style="width: 100%; text-align: left"
       >
-        + Collapsible
+        + I Rejected my admission. what should i do?
       </button>
 
-      <div id="demo" class="collapse">Lorem ipsum dolor text....</div>
+      <div id="faq1" class="collapse pt-2">
+        So about that, unfortunately, when you reject your admission there is
+        nothing we can do about that. You instead advice to look out for
+        admission in other schools you include in your choice. Best regards
+      </div>
     </div>
-    <div class="col-md">
+    <div class="col-md-6 pt-4">
       <button
         data-bs-toggle="collapse"
-        data-bs-target="#demo"
-        class="btn btn-dark"
+        data-bs-target="#faq2"
+        class="btn btn-dark faq-btn"
+        style="width: 100%; text-align: left"
+      >
+        + My School fee is not reflecting in the portal after payment.
+      </button>
+
+      <div id="faq2" class="collapse pt-2">
+        Kindly to the contact us tab and fill in a complain. while you do so?
+        provide your admission number and your school invoice ID number for
+        rectification
+      </div>
+    </div>
+    <div class="col-md-6 pt-4">
+      <button
+        data-bs-toggle="collapse"
+        data-bs-target="#faq3"
+        class="btn btn-dark faq-btn"
+        style="width: 100%; text-align: left"
       >
         + Collapsible
       </button>
 
-      <div id="demo" class="collapse">Lorem ipsum dolor text....</div>
+      <div id="faq3" class="collapse">Lorem ipsum dolor text....</div>
+    </div>
+    <div class="col-md-6 pt-4">
+      <button
+        data-bs-toggle="collapse"
+        data-bs-target="#faq4"
+        class="btn btn-dark faq-btn"
+        style="width: 100%; text-align: left; background-color: saddlebrown"
+      >
+        + Collapsible
+      </button>
+
+      <div id="faq4" class="collapse">Lorem ipsum dolor text....</div>
     </div>
   </div>
   <div class="row"></div>
