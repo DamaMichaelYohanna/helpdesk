@@ -29,7 +29,38 @@
 .mission-item{
     font-size: 25px;
 }
+@media (max-width: 666px) {
+    .home-welcome{
+        width: 100%;
+        padding-bottom: 3%;
+    }
+}
 
+
+/* about us page */
+/* --------------------- */
+.about-inner{
+    width: 38%; margin: 0px auto; text-align: justify
+}
+.about-image img{
+    position: relative;
+    top: -40px;
+    box-shadow: -30px -30px 4px saddlebrown;
+    height:100%;
+    width:500px;
+}
+@media(max-width: 666px){
+    .about-inner{
+        width: 90%;
+    }
+    .about-image{
+        padding: 0px 5%;
+    }
+    .about-image img{
+        height:100%;
+        width:100%;
+    }
+}
 
 
 /* contact page css */
@@ -44,6 +75,7 @@ padding:2% 0px;
 
 
 /* issues page css */
+/* ----------------------------- */
 .issues{
     text-align: center
 }
@@ -54,7 +86,11 @@ padding:2% 0px;
 .inner-issues button{
     background: saddlebrown
 }
-
+@media (max-width: 666px) {
+    .inner-issues{
+        width: 90%; margin: auto
+    }
+}
 
 /* faq page css */
 .faq-btn{
