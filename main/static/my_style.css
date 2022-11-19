@@ -51,7 +51,7 @@
 }
 @media(max-width: 666px){
     .about-inner{
-        width: 90%;
+        width: 100%;
     }
     .about-image{
         padding: 0px 5%;
