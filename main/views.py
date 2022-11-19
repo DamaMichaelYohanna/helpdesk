@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, reverse, redirect
 
 from main.models import Issue
+from main.utility import generate_ref
 
 
 def home(request):
@@ -22,7 +23,7 @@ def contact(request):
         message = request.POST.get("message")
         obj = Issue.objects.create(complainant=name, email=email, complain=message)
         # obj.save(commt=False)
-        obj.ref = "##000009876"
+        obj.ref = generate_ref()
         obj.save()
         messages.success(request, "your issue has been submitted successfully")
         return render(request, 'contact.html', {'ticket': obj.ref})
