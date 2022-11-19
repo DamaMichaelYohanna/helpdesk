@@ -1,1 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}{% block title %} {% endblock %} {% block content %}
+<div>
+  <div class="row">
+    <div class="col-md">
+      <button data-bs-toggle="collapse" data-bs-target="#demo">
+        Collapsible
+      </button>
+
+      <div id="demo" class="collapse">Lorem ipsum dolor text....</div>
+    </div>
+    <div class="col-md"></div>
+  </div>
+  <div class="row"></div>
+  <div class="row"></div>
+</div>
+{% endblock %}
